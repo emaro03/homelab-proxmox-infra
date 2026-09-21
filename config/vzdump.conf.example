@@ -1,0 +1,10 @@
+# /etc/vzdump.conf — example, sanitized
+# Adjust storage target and schedule to your real setup.
+
+tmpdir: /var/tmp
+dumpdir: /mnt/backup-storage/vzdump   # <-- point to your actual backup target
+storage: local
+mode: snapshot
+compress: zstd
+notes-template: "{{guestname}} - {{node}}"
+mailto: your-email@example.com
