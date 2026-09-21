@@ -1,12 +1,12 @@
 # Proxmox Infrastructure Layer
 
-> Part of [homelab-hub](https://github.com/YOUR_USERNAME/homelab-hub). The hypervisor layer that everything else in the lab runs on.
+> Part of [homelab-hub](https://github.com/emaro03/homelab-hub). The hypervisor layer that everything else in the lab runs on.
 
 ## Overview
 
 The lab currently runs on a single Proxmox VE host (Dell Optiplex 3040 — i7-6700T, 4c/8t @2.80GHz, 12GB RAM, 1TB SSD, no dedicated GPU), mixing:
 
-- **LXC containers** for services that benefit from lightweight, direct hardware access (e.g. Jellyfin with iGPU passthrough — see [`homelab-jellyfin-transcoding`](https://github.com/YOUR_USERNAME/homelab-jellyfin-transcoding)).
+- **LXC containers** for services that benefit from lightweight, direct hardware access (e.g. Jellyfin with iGPU passthrough — see [`homelab-jellyfin-transcoding`](https://github.com/emaro03/homelab-jellyfin-transcoding)).
 - **Docker Compose stacks** (running inside a dedicated LXC or VM) for everything else — easier to version, update and reproduce than native LXC installs.
 
 ## What's in this repo
